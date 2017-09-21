@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j=0,k;
+char str[100],vowels[100];
+scanf("%s",str);
+for(i=0;i<strlen(str);i++)
+{
+    if(str[i]=='a' || str[i]=='e' || str[i]=='i' ||str[i]=='o' ||str[i]=='u'|| 
+    str[i]=='A' || str[i]=='E' || str[i]=='I'||str[i]=='O'|| str[i]=='U') 
+    {
+        vowels[j++]=str[i];
+    }
+    
+}
+for(i=0;i<strlen(str);i++)
+{
+    if(str[i]=='a' || str[i]=='e' || str[i]=='i' ||str[i]=='o' ||str[i]=='u'|| 
+    str[i]=='A' || str[i]=='E' || str[i]=='I'||str[i]=='O'|| str[i]=='U') 
+    {
+        str[i]=vowels[--j];
+    }
+    
+}
+printf("%s",str);
+
+
+    return 0;
+}
